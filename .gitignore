@@ -1,2 +1,4 @@
 manifest.yml
-tmp/*
+/log/*
+/tmp/*
+db/development.sqlite3
