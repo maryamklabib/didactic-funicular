@@ -9,21 +9,19 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
+		@article = Article.new
 	end
 
 	def create
 		@article = Article.new(article_params)
 
-		@article.save
-		redirect_to @article
+		if @article.save
+			redirect_to @article
+		else
+			render 'new'
+		end
 	end
 
-	# def show
-		# @article_foo = Article.new()
-		# @article_foo.title = params[:title]
-		# @article_foo.save
-	# end
-	
 	private
 
 	def article_params
