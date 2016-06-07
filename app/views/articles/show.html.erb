@@ -8,20 +8,8 @@
 	<%= @article.text %>
 </p>
 
-<h2>
-	Comments
-</h2>
-<% @article.comments.each do |comment| %>
-	<p>
-	<strong>COMMENTER</strong>
-	<%= comment.commenter %>
-	</p>
-
-	<p>
-	<strong>COMMENT</strong>
-	<%= comment.body%>
-	</p>
-<% end %>
+<h2> Comments </h2>
+<%= render @article.comments %>
 
 
 <h2> Leave a kind/constructive comment!</h2>
