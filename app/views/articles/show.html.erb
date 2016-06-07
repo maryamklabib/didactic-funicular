@@ -9,7 +9,9 @@
 </p>
 
 <h2> Comments </h2>
-<%= render @article.comments %>
+	<% if @article.comments.any? %>	
+		<%=render @article.comments %>
+	<% end %>
 
 
 <h2> Leave a kind/constructive comment!</h2>
